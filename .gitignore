@@ -1,0 +1,12 @@
+# Dependencias y builds (se regeneran)
+node_modules/
+html/
+
+# Logs y sistema
+*.log
+.DS_Store
+Thumbs.db
+
+# Credenciales
+.env
+.env.local

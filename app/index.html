@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="es" class="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Jhonier Garzón — Técnico Superior en Sistemas y Redes</title>
+    <meta
+      name="description"
+      content="Portfolio de Jhonier Garzón, técnico superior en administración de sistemas y redes. Proxmox, Docker, redes y seguridad."
+    />
+    <meta name="theme-color" content="#0a0a0f" />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="es_ES" />
+    <meta property="og:title" content="Jhonier Garzón — Técnico Superior en Sistemas y Redes" />
+    <meta
+      property="og:description"
+      content="Técnico superior en administración de sistemas y redes. Proxmox, Docker, redes y seguridad."
+    />
+    <!-- TODO: rellenar cuando el sitio tenga dominio público
+    <meta property="og:url" content="https://TU-DOMINIO" />
+    <meta property="og:image" content="https://TU-DOMINIO/og-image.png" />
+    -->
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="Jhonier Garzón — Administrador de Sistemas" />
+    <meta
+      name="twitter:description"
+      content="Administrador de sistemas e infraestructura. Proxmox, Docker, redes y seguridad."
+    />
+
+    <script>
+      (function () {
+        try {
+          var t = localStorage.getItem('theme')
+          if (t === 'light') {
+            document.documentElement.classList.remove('dark')
+          } else {
+            document.documentElement.classList.add('dark')
+          }
+        } catch (e) {}
+      })()
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
