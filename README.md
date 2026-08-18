@@ -1,50 +1,65 @@
-# Portfolio — Jhonier Garzón
+# Jhonier Garzón — Portfolio
 
-Portfolio profesional estático: **React 19 + Vite 8 + TypeScript + Tailwind 4 + shadcn/ui + Motion**.
+> Técnico Superior en Administración de Sistemas y Redes · Toledo, España
 
-## Requisitos
+Mi portfolio profesional: la web donde muestro quién soy, mi experiencia, los proyectos de infraestructura que mantengo en mi homelab y cómo contactar conmigo.
 
-- Node.js 20 o superior
+## 🌐 Ver en vivo
 
-## Levantar en local (desarrollo)
+**https://jhoniergv.github.io/portfolio/**
 
-```bash
-npm install
-npm run dev
-```
+---
 
-Abre http://localhost:5173 (Vite). Cambios en caliente.
+## Sobre mí
 
-## Build de producción
+Técnico informático especializado en administración de sistemas, virtualización y soporte técnico. Diseño, despliego y mantengo infraestructura autohospedada: Proxmox, Docker, redes y seguridad.
 
-```bash
-npm run build
-```
+Apasionado por la infraestructura y el autohospedaje. Gestiono un homelab donde conviven virtualización Proxmox, servicios en contenedores, firewall pfSense y monitoreo de seguridad — todo aprendido y mantenido por mí, con foco en disponibilidad y buenas prácticas.
 
-Genera la carpeta `html/` (build estático listo para servir con cualquier servidor web o hosting estático).
+Busco un puesto como administrador o técnico de sistemas donde pueda aportar orden, automatización y seguridad a entornos reales.
 
-## GitHub Pages (público)
+## Qué encontrarás en la web
 
-- **URL:** https://jhoniergv.github.io/portfolio/
-- **Repo:** https://github.com/JhonierGV/portfolio
-- Cada push a `main` compila el sitio en GitHub Actions (`.github/workflows/deploy.yml`) y lo publica automáticamente. El CI compila con `GH_PAGES=true` para que los assets apunten a `/portfolio/`.
-- En local el build usa rutas de raíz (`/assets/...`) para el deploy al homelab; el CI lo cambia solo.
+- **Hero con terminal interactiva**: 10 comandos para explorar el portfolio como si fuera un servidor
+- **Servicios**: lo que hago y cómo puedo ayudar
+- **Experiencia**: CYSIA (2025–2026), IES Universidad Laboral de Toledo (2024) y mi homelab autogestionado (2024 — actualidad)
+- **Proyectos**: 9 proyectos con ficha detallada (problema, solución, arquitectura y lecciones aprendidas)
+- **Arquitectura**: el homelab a vista de pájaro
+- **Contacto**: email, LinkedIn y GitHub
+- **Easter eggs**: un perrito ASCII incluido 🐶
 
-## Estructura
+## Proyectos destacados
 
-```
-app/
-├── index.html          # HTML raíz (meta/OG, script de tema)
-├── vite.config.ts      # build → ../html
-└── src/
-    ├── data/portfolio.ts   # ★ TODO el contenido: perfil, experiencia, skills, proyectos, contacto
-    ├── components/site/    # Secciones de la página
-    └── components/ui/      # shadcn/ui (button, badge)
-```
+| Proyecto | Stack |
+|---|---|
+| **Homelab Proxmox** — 18 servicios autohospedados en un solo nodo | Proxmox, LXC, Docker, PBS |
+| **VPN Privada** — túnel WireGuard que sortea el CGNAT del ISP | WireGuard, Oracle Cloud, LXC |
+| **Wazuh SIEM** — monitoreo de seguridad centralizado | Wazuh, SIEM, IDS, FIM |
+| **Adblocker de red** — DNS que bloquea anuncios y trackers en toda la LAN | AdGuard Home, DNS |
+| **Hermes Agent** — agente de IA autónomo con inferencia local | Hermes Agent, Ollama, Telegram |
+| **Proxmox Backup Server** — backups deduplicados con restauración granular | PBS, deduplicación |
+| **n8n · Automatización** — workflows que conectan servicios del homelab | n8n, webhooks, cron |
+| **Gestor de contraseñas privado** — compatible con Bitwarden | Vaultwarden, Docker |
+| **Nginx Proxy Manager** — proxy inverso con SSL automático | NPM, Let's Encrypt |
 
-**Regla de oro:** el contenido se edita en `src/data/portfolio.ts`. La carpeta `html/` NO se toca a mano (se regenera en cada build).
+## Tecnologías de la web
 
-## Notas
+React 19 · Vite 8 · TypeScript · Tailwind CSS 4 · shadcn/ui · Motion
 
-- `deploy.sh` es específico del homelab del autor (sube el build a un LXC con nginx) — opcional, ignorarlo al desplegar en otro sitio.
-- Sin dependencias de backend: sitio 100% estático, apto para GitHub Pages, Netlify, Cloudflare Pages, etc.
+## Stack que administro a diario
+
+Virtualización (Proxmox VE, LXC, QEMU/KVM, VMware) · Redes (pfSense, MikroTik, WireGuard, Tailscale, HAProxy) · Proxy y SSL (Nginx Proxy Manager, Let's Encrypt) · Seguridad (Wazuh, Zabbix) · Sistemas (Linux, Windows Server, Bash, Python) · Cloud (Hetzner, Oracle Cloud, Azure) · BBDD (PostgreSQL, MySQL, SQL Server)
+
+## Contacto
+
+- 📧 jhoniergarzon68@gmail.com
+- 🔗 [LinkedIn](https://www.linkedin.com/in/JhonierGarzonIT)
+- 🐙 [GitHub](https://github.com/JhonierGV)
+
+---
+
+## Notas del proyecto
+
+- Sitio 100% estático, sin backend: apto para GitHub Pages, Netlify, Cloudflare Pages, etc.
+- **Todo el contenido se edita en `app/src/data/portfolio.ts`** — la carpeta `html/` se regenera en cada build y no se toca a mano.
+- Cada push a `main` publica automáticamente el sitio en GitHub Pages (workflow en `.github/workflows/deploy.yml`).
