@@ -23,6 +23,13 @@ npm run build
 
 Genera la carpeta `html/` (build estático listo para servir con cualquier servidor web o hosting estático).
 
+## GitHub Pages (público)
+
+- **URL:** https://jhoniergv.github.io/portfolio/
+- **Repo:** https://github.com/JhonierGV/portfolio
+- Cada push a `main` compila el sitio en GitHub Actions (`.github/workflows/deploy.yml`) y lo publica automáticamente. El CI compila con `GH_PAGES=true` para que los assets apunten a `/portfolio/`.
+- En local el build usa rutas de raíz (`/assets/...`) para el deploy al homelab; el CI lo cambia solo.
+
 ## Estructura
 
 ```
