@@ -4,6 +4,7 @@ import { Button } from '@/components/ui/button'
 import { portfolio } from '@/data/portfolio'
 import { OceanicShimmer } from './OceanicShimmer'
 import { ShaderBackground } from './ShaderBackground'
+import { MagneticButton } from './MagneticButton'
 
 const container: Variants = {
   hidden: {},
@@ -62,18 +63,22 @@ export function Hero() {
         </motion.div>
 
         <motion.div variants={item} className="mt-10 flex flex-wrap items-center justify-center gap-3">
-          <Button asChild size="lg">
-            <a href={portfolio.cvUrl} download>
-              <Download data-icon="inline-start" />
-              Descargar CV
-            </a>
-          </Button>
-          <Button asChild size="lg" variant="outline">
-            <a href="#proyectos">
-              Ver proyectos
-              <ArrowRight data-icon="inline-end" />
-            </a>
-          </Button>
+          <MagneticButton>
+            <Button asChild size="lg">
+              <a href={portfolio.cvUrl} download>
+                <Download data-icon="inline-start" />
+                Descargar CV
+              </a>
+            </Button>
+          </MagneticButton>
+          <MagneticButton>
+            <Button asChild size="lg" variant="outline">
+              <a href="#proyectos">
+                Ver proyectos
+                <ArrowRight data-icon="inline-end" />
+              </a>
+            </Button>
+          </MagneticButton>
         </motion.div>
       </motion.div>
     </section>

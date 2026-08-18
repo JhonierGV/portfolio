@@ -377,7 +377,9 @@ export function ShaderBackground({ className }: { className?: string }) {
     function start() {
       if (running) return
       running = true
-      el!.style.opacity = '1'
+      // Opacidad parcial: deja ver el gradiente oceánico de fondo y la rejilla
+      // para que el hero no se quede en negro en modo oscuro.
+      el!.style.opacity = '0.6'
       if (reduced) {
         frame()
         return

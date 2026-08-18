@@ -49,7 +49,7 @@ export const portfolio = {
     {
       company: 'CYSIA',
       role: 'Administrador de Sistemas (Inter)',
-      period: '2025',
+      period: '2026',
       points: [
         'Monitorización de infraestructura local y en nube con Zabbix.',
         'Despliegue y configuración de Wazuh para detección de vulnerabilidades y análisis de eventos.',
@@ -61,7 +61,7 @@ export const portfolio = {
     },
     {
       company: 'CYSIA',
-      role: 'Técnico Informático',
+      role: 'Técnico Informático (Inter)',
       period: '2025',
       points: [
         'Soporte y mantenimiento de servidores físicos.',
@@ -114,15 +114,11 @@ export const portfolio = {
   skills: [
     {
       title: 'Virtualización',
-      items: ['Proxmox VE', 'LXC', 'QEMU/KVM'],
-    },
-    {
-      title: 'Contenedores',
-      items: ['Docker', 'Docker Compose'],
+      items: ['Proxmox VE', 'LXC', 'QEMU/KVM', 'Vagrant', 'VMware'],
     },
     {
       title: 'Redes',
-      items: ['pfSense', 'WireGuard', 'Tailscale', 'HAProxy', 'DNS'],
+      items: ['pfSense', 'MikroTik', 'WireGuard', 'Tailscale', 'HAProxy', 'DNS'],
     },
     {
       title: 'Proxy & SSL',
@@ -130,11 +126,19 @@ export const portfolio = {
     },
     {
       title: 'Seguridad',
-      items: ['Wazuh SIEM', 'Hardening', 'Monitoreo'],
+      items: ['Wazuh SIEM', 'Zabbix'],
     },
     {
       title: 'Sistemas',
-      items: ['Linux', 'Windows Server AD', 'Bash', 'Backups'],
+      items: ['Linux', 'Windows Server AD', 'Bash', 'Python', 'Git', 'Cron'],
+    },
+    {
+      title: 'Cloud',
+      items: ['Hetzner', 'Oracle Cloud', 'Azure'],
+    },
+    {
+      title: 'BBDD',
+      items: ['PostgreSQL', 'MySQL', 'SQL Server', 'SQLite'],
     },
   ],
   projects: [

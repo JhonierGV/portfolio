@@ -344,6 +344,22 @@
   background-size: 140px 140px;
 }
 
+/* ===== Page glow: gradiente oceánico en toda la página (vivo en ambos temas) ===== */
+.page-glow {
+  --glow-a: rgba(127, 198, 230, 0.16);
+  --glow-b: rgba(46, 124, 192, 0.13);
+  --glow-c: rgba(18, 58, 107, 0.18);
+  background:
+    radial-gradient(720px 500px at 10% 6%, var(--glow-a), transparent 65%),
+    radial-gradient(820px 540px at 90% 28%, var(--glow-b), transparent 65%),
+    radial-gradient(720px 500px at 45% 94%, var(--glow-c), transparent 65%);
+}
+.dark .page-glow {
+  --glow-a: rgba(27, 108, 168, 0.22);
+  --glow-b: rgba(90, 210, 244, 0.11);
+  --glow-c: rgba(27, 108, 168, 0.18);
+}
+
 /* ===== Reduced motion ===== */
 @media (prefers-reduced-motion: reduce) {
   .aurora-1,
