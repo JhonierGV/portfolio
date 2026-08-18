@@ -2,6 +2,9 @@
 node_modules/
 html/
 
+# Script local de despliegue al homelab (no se publica)
+deploy.sh
+
 # Logs y sistema
 *.log
 .DS_Store
