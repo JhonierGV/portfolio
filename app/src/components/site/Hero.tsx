@@ -1,5 +1,5 @@
 import { motion, type Variants } from 'motion/react'
-import { ArrowRight, Download } from 'lucide-react'
+import { ArrowRight } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { portfolio } from '@/data/portfolio'
 import { OceanicShimmer } from './OceanicShimmer'
@@ -63,14 +63,6 @@ export function Hero() {
         </motion.div>
 
         <motion.div variants={item} className="mt-10 flex flex-wrap items-center justify-center gap-3">
-          <MagneticButton>
-            <Button asChild size="lg">
-              <a href={portfolio.cvUrl} download>
-                <Download data-icon="inline-start" />
-                Descargar CV
-              </a>
-            </Button>
-          </MagneticButton>
           <MagneticButton>
             <Button asChild size="lg" variant="outline">
               <a href="#proyectos">

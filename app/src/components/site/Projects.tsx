@@ -1,6 +1,5 @@
 import { useState } from 'react'
 import { ArrowUpRight, Image as ImageIcon } from 'lucide-react'
-import { Badge } from '@/components/ui/badge'
 import { SectionHeading } from './SectionHeading'
 import { Reveal } from './Reveal'
 import { ProjectModal } from './ProjectModal'
@@ -36,7 +35,7 @@ export function Projects() {
                           src={project.screenshot}
                           alt={`Captura de ${project.title}`}
                           loading="lazy"
-                          className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                          className="h-full w-full object-cover transition-transform duration-700 ease-out group-hover:scale-125"
                         />
                       </div>
                     ) : (
@@ -53,13 +52,6 @@ export function Projects() {
                       <p className="mt-2 flex-1 text-sm leading-relaxed text-muted-foreground">
                         {project.description}
                       </p>
-                      <div className="mt-4 flex flex-wrap gap-2">
-                        {project.tags.map((tag) => (
-                          <Badge key={tag} variant="secondary" className="font-mono text-[11px]">
-                            {tag}
-                          </Badge>
-                        ))}
-                      </div>
                       <span className="mt-4 font-mono text-[11px] uppercase tracking-wider text-muted-foreground transition-colors group-hover:text-primary">
                         Ver detalles →
                       </span>

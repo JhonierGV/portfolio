@@ -3,9 +3,9 @@ import { Hero } from '@/components/site/Hero'
 import { InteractiveTerminal } from '@/components/site/InteractiveTerminal'
 import { Stats } from '@/components/site/Stats'
 import { About } from '@/components/site/About'
+import { Services } from '@/components/site/Services'
 import { Experience } from '@/components/site/Experience'
 import { Education } from '@/components/site/Education'
-import { Skills } from '@/components/site/Skills'
 import { Projects } from '@/components/site/Projects'
 import { ArchitectureDiagram } from '@/components/site/ArchitectureDiagram'
 import { Certifications } from '@/components/site/Certifications'
@@ -29,9 +29,9 @@ export default function App() {
           <InteractiveTerminal />
           <Stats />
           <About />
+          <Services />
           <Experience />
           <Education />
-          <Skills />
           <Projects />
           <ArchitectureDiagram />
           <Certifications />

@@ -92,11 +92,11 @@ export function ProjectModal({ project, onClose }: ProjectModalProps) {
           </div>
 
           {project.screenshot ? (
-            <div className="mt-4 overflow-hidden rounded-xl border border-border">
+            <div className="relative z-10 mt-4 rounded-xl border border-border">
               <img
                 src={project.screenshot}
                 alt={`Captura de ${project.title}`}
-                className="h-auto w-full object-cover"
+                className="h-auto w-full object-cover transition-transform duration-700 ease-out hover:scale-105"
                 loading="lazy"
               />
             </div>

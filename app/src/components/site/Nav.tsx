@@ -1,6 +1,4 @@
 import { useEffect, useState } from 'react'
-import { Download } from 'lucide-react'
-import { Button } from '@/components/ui/button'
 import { navLinks, portfolio } from '@/data/portfolio'
 import { cn } from '@/lib/utils'
 import { ThemeToggle } from './ThemeToggle'
@@ -66,12 +64,6 @@ export function Nav() {
 
         <div className="flex items-center gap-2">
           <ThemeToggle />
-          <Button asChild size="sm" className="hidden sm:inline-flex">
-            <a href={portfolio.cvUrl} download>
-              <Download data-icon="inline-start" />
-              Descargar CV
-            </a>
-          </Button>
         </div>
       </div>
     </header>

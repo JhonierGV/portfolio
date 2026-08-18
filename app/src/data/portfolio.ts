@@ -27,21 +27,21 @@ export const portfolio = {
     'Técnico informático especializado en administración de sistemas, virtualización y soporte técnico. Diseño, despliego y mantengo infraestructura autohospedada: Proxmox, Docker, redes y seguridad.',
   summary: [
     'Apasionado por la infraestructura y el autohospedaje. Gestiono un homelab donde conviven virtualización Proxmox, servicios en contenedores, firewall pfSense y monitoreo de seguridad — todo aprendido y mantenido por mí, con foco en disponibilidad y buenas prácticas.',
-    'Busco el rol de administrador de sistemas donde pueda aportar orden, automatización y seguridad a entornos reales.',
+    'Busco un puesto como administrador o técnico de sistemas donde pueda aportar orden, automatización y seguridad a entornos reales.',
   ],
-  location: 'Toledo · Nambroca, España',
+  location: 'Toledo, España',
   email: 'jhoniergarzon68@gmail.com',
   phone: '+34 643 46 47 53',
   linkedin: 'https://www.linkedin.com/in/JhonierGarzonIT',
-  github: 'https://github.com/jhonier2',
+  github: 'https://github.com/JhonierGV',
   cvUrl: 'assets/CV_JhonierGarzon.pdf',
   status: [
     { label: 'Nodo Proxmox operativo', dot: true },
     { label: 'Disponible para oportunidades', dot: true },
   ],
   stats: [
-    { value: '14', label: 'Contenedores LXC' },
-    { value: '4', label: 'Máquinas virtuales' },
+    { value: '12', label: 'Contenedores LXC' },
+    { value: '2', label: 'Máquinas virtuales' },
     { value: '18', label: 'Servicios self-hosted' },
     { value: '1', label: 'Nodo Proxmox' },
   ],
@@ -64,11 +64,9 @@ export const portfolio = {
       role: 'Técnico Informático (Inter)',
       period: '2025',
       points: [
-        'Soporte y mantenimiento de servidores físicos.',
         'Resolución de incidencias y atención a usuarios.',
         'Configuración y actualización de equipos y sistemas.',
-        'Gestión de copias de seguridad y medidas de seguridad en sistemas.',
-        'Gestión de servidores virtualizados.',
+        'Soporte remoto a usuarios.',
       ],
     },
     {
@@ -147,15 +145,15 @@ export const portfolio = {
       description:
         'Plataforma de virtualización con 18 servicios autohospedados en un único nodo, backups y alta disponibilidad.',
       tags: ['Proxmox', 'Docker', 'LXC'],
-      screenshot: 'assets/proyecto-homelab.png',
+      screenshot: 'assets/pve.png',
       problem:
         'Necesitaba un sitio donde poder experimentar con nuevas herramientas, sacarles utilidad para aprender por mi cuenta y que todo fuera en local.',
       solution:
-        'Un único nodo físico Proxmox VE que virtualiza 14 contenedores LXC y 4 máquinas virtuales, con almacenamiento local y remoto mediante Proxmox Backup Server y red organizada por zonas.',
+        'Un único nodo físico Proxmox VE que virtualiza 12 contenedores LXC y 2 máquinas virtuales, con almacenamiento local y remoto mediante Proxmox Backup Server y red organizada por zonas.',
       architecture: [
         'Nodo físico único: 4 cores y 15,5 GiB de RAM.',
-        '14 contenedores LXC para servicios ligeros (DNS, proxy, VPN, IA, búsqueda, automatización).',
-        '4 máquinas virtuales para cargas con requisitos propios (backups, cloud, firewall, backup enterprise).',
+        '12 contenedores LXC para servicios ligeros (DNS, proxy, VPN, IA, búsqueda, automatización).',
+        '2 máquinas virtuales para cargas con requisitos propios (backups, cloud, firewall, backup enterprise).',
         'Almacenamiento: pool local LVM-thin + pools PBS remotos con deduplicación.',
         'Red local segmentada con firewall en los puntos de entrada.',
       ],
@@ -166,13 +164,14 @@ export const portfolio = {
         'La deduplicación de PBS hace viable respaldar 18 servicios sin explotar el disco.',
         'Documentar cada servicio (rol, recursos, función) evita el caos cuando la infraestructura crece.',
       ],
-      facts: ['14 contenedores LXC', '4 máquinas virtuales', '18 servicios self-hosted', '1 nodo físico'],
+      facts: ['12 contenedores LXC', '2 máquinas virtuales', '18 servicios self-hosted', '1 nodo físico'],
     },
     {
-      title: 'VPN WireGuard + CGNAT',
+      title: 'VPN Privada',
       description:
         'VPN totalmente privada: túnel WireGuard que sortea el CGNAT del ISP mediante un relay en Oracle Cloud, sin depender de servicios VPN de terceros.',
       tags: ['WireGuard', 'Redes', 'Oracle Cloud'],
+      screenshot: 'assets/wireguard.png',
       problem:
         'El ISP usa CGNAT: sin IP pública, ningún servicio del homelab era accesible desde Internet.',
       solution:
@@ -196,6 +195,7 @@ export const portfolio = {
       description:
         'Monitoreo de seguridad centralizado sobre los agentes y servicios del homelab.',
       tags: ['Wazuh', 'Seguridad'],
+      screenshot: 'assets/wazuh.png',
       problem:
         'Sin visibilidad centralizada de los eventos de seguridad: logs dispersos, sin detección de intrusiones ni control de integridad de archivos.',
       solution:
@@ -214,10 +214,11 @@ export const portfolio = {
       ],
     },
     {
-      title: 'AdGuard Home',
+      title: 'Adblocker para red local',
       description:
         'DNS de red con filtrado de anuncios y trackers en toda la LAN.',
       tags: ['AdGuard', 'DNS'],
+      screenshot: 'assets/adguard.png',
       problem:
         'Anuncios, trackers y dominios maliciosos llegaban a todos los dispositivos de la red: móviles, TV, IoT.',
       solution:
@@ -239,6 +240,7 @@ export const portfolio = {
       description:
         'Agente de IA autónomo (Nous Research) en su propio LXC, con inferencia local vía Ollama y gateway de Telegram.',
       tags: ['IA', 'LXC', 'Ollama'],
+      screenshot: 'assets/hermes-agent.png',
       problem:
         'Quería un asistente de IA privado que ayudara a operar el homelab sin depender de servicios en la nube ni exponer datos.',
       solution:
@@ -261,6 +263,7 @@ export const portfolio = {
       description:
         'Backups nativos y deduplicados de toda la infraestructura con restauración granular.',
       tags: ['PBS', 'Backups'],
+      screenshot: 'assets/proxmox-bakuck.png',
       problem:
         'Sin un sistema de backups fiable, cualquier fallo de disco suponía pérdida total de datos y configuración.',
       solution:
@@ -283,6 +286,7 @@ export const portfolio = {
       description:
         'Motor de automatización con workflows que conectan servicios del homelab, tareas programadas y avisos por Telegram.',
       tags: ['n8n', 'Automatización'],
+      screenshot: 'assets/n8n.png',
       problem:
         'Tareas repetitivas del homelab (monitorización, ingesta de documentación, avisos) consumían tiempo a mano.',
       solution:
@@ -300,10 +304,11 @@ export const portfolio = {
       ],
     },
     {
-      title: 'Vaultwarden',
+      title: 'Gestor de contraseñas privado',
       description:
         'Gestor de contraseñas self-hosted, compatible con Bitwarden, para centralizar los secretos del homelab.',
       tags: ['Vaultwarden', 'Bitwarden', 'Docker'],
+      screenshot: 'assets/vaultwarden.png',
       problem:
         'Contraseñas dispersas y dependencia de gestores en la nube de terceros.',
       solution:
@@ -325,6 +330,7 @@ export const portfolio = {
       description:
         'Proxy inverso con SSL automático (Let\'s Encrypt) para exponer los servicios del homelab por subdominio.',
       tags: ['NPM', 'Proxy', 'SSL'],
+      screenshot: 'assets/nginx.png',
       problem:
         'Múltiples servicios HTTP sin un punto de entrada único ni HTTPS automatizado.',
       solution:
@@ -350,7 +356,6 @@ export type Portfolio = typeof portfolio
 export const navLinks = [
   { href: '#sobre-mi', label: 'Sobre mí' },
   { href: '#experiencia', label: 'Experiencia' },
-  { href: '#skills', label: 'Skills' },
   { href: '#proyectos', label: 'Proyectos' },
   { href: '#arquitectura', label: 'Arquitectura' },
   { href: '#contacto', label: 'Contacto' },

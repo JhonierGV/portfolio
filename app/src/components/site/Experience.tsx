@@ -45,12 +45,6 @@ export function Experience() {
                 <div className="flex flex-wrap items-center justify-between gap-2">
                   <h3 className="text-lg font-semibold text-foreground">{item.role}</h3>
                   <div className="flex flex-wrap items-center gap-2">
-                    {'current' in item && item.current ? (
-                      <span className="inline-flex items-center gap-1.5 rounded-full border border-emerald-500/30 bg-emerald-500/10 px-2.5 py-0.5 text-xs font-medium text-emerald-500">
-                        <span className="size-1.5 rounded-full bg-emerald-400" aria-hidden />
-                        Actualidad
-                      </span>
-                    ) : null}
                     <span className="font-mono text-xs text-muted-foreground">{item.period}</span>
                   </div>
                 </div>

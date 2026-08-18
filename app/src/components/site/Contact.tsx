@@ -1,4 +1,4 @@
-import { Download, Mail } from 'lucide-react'
+import { Mail, Rocket } from 'lucide-react'
 import { GithubIcon, LinkedinIcon } from './BrandIcons'
 import { Button } from '@/components/ui/button'
 import { SectionHeading } from './SectionHeading'
@@ -21,10 +21,26 @@ const channels = [
   {
     icon: GithubIcon,
     label: 'GitHub',
-    value: 'jhonier2',
+    value: 'JhonierGV',
     href: portfolio.github,
   },
 ]
+
+const proposalSubject = 'Propuesta de proyecto'
+const proposalBody = [
+  'Hola Jhonier,',
+  '',
+  'Te propongo el siguiente proyecto:',
+  '',
+  '- Nombre:',
+  '- Idea/Resumen:',
+  '- Alcance/Objetivo:',
+  '- Plazo estimado:',
+  '',
+  'Un saludo,',
+  '[Tu nombre]',
+].join('\n')
+const proposalHref = `mailto:${portfolio.email}?subject=${encodeURIComponent(proposalSubject)}&body=${encodeURIComponent(proposalBody)}`
 
 export function Contact() {
   return (
@@ -33,7 +49,7 @@ export function Contact() {
         <SectionHeading
           eyebrow="// contacto"
           title="¿Hablamos?"
-          description="Si buscas un administrador de sistemas que aporte orden, automatización y seguridad, escríbeme por cualquiera de estos canales."
+          description="Si buscas un administrador o técnico en sistemas que pueda aportar a algún proyecto, puedes contactarme por cualquiera de estos canales."
         />
 
         <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
@@ -58,13 +74,16 @@ export function Contact() {
           })}
         </div>
 
-        <Reveal className="mt-10 flex justify-center" delay={120}>
+        <Reveal className="mt-10 flex flex-col items-center gap-3" delay={120}>
           <Button asChild size="lg">
-            <a href={portfolio.cvUrl} download>
-              <Download data-icon="inline-start" />
-              Descargar CV
+            <a href={proposalHref} target="_blank" rel="noopener noreferrer">
+              <Rocket data-icon="inline-start" />
+              Propón un proyecto
             </a>
           </Button>
+          <p className="font-mono text-xs text-muted-foreground">
+            Cuéntame tu idea y te respondo con una propuesta.
+          </p>
         </Reveal>
       </div>
     </section>

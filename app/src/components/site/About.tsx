@@ -5,10 +5,10 @@ import { Reveal } from './Reveal'
 import { portfolio } from '@/data/portfolio'
 
 const facts = [
-  { icon: MapPin, label: 'Ubicación', value: 'Toledo · Nambroca, España' },
+  { icon: MapPin, label: 'Ubicación', value: 'Toledo, España' },
   { icon: Mail, label: 'Email', value: portfolio.email },
   { icon: LinkedinIcon, label: 'LinkedIn', value: 'JhonierGarzonIT', href: portfolio.linkedin },
-  { icon: GithubIcon, label: 'GitHub', value: 'jhonier2', href: portfolio.github },
+  { icon: GithubIcon, label: 'GitHub', value: 'JhonierGV', href: portfolio.github },
 ]
 
 export function About() {

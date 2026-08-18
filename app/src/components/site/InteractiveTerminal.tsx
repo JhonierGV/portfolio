@@ -3,6 +3,7 @@ import { motion } from 'motion/react'
 import { SectionHeading } from './SectionHeading'
 import { Reveal } from './Reveal'
 import { portfolio } from '@/data/portfolio'
+import { ThisIsFineDog } from './ThisIsFineDog'
 
 type Line = { type: 'input' | 'output'; content: ReactNode; key: string }
 
@@ -13,7 +14,6 @@ const COMMANDS = [
   'proyectos',
   'educacion',
   'neofetch',
-  'cv',
   'uptime',
   'clear',
   'help',
@@ -41,9 +41,6 @@ function buildHelp(): ReactNode {
         </li>
         <li>
           <span className="text-primary">neofetch</span> — info del sistema
-        </li>
-        <li>
-          <span className="text-primary">cv</span> — descargar mi CV
         </li>
         <li>
           <span className="text-primary">uptime</span> — estado del homelab
@@ -170,21 +167,6 @@ function runCommand(raw: string): ReactNode | null {
     )
   }
 
-  if (cmd === 'cv') {
-    return (
-      <p>
-        Descárgalo aquí:{' '}
-        <a
-          href={portfolio.cvUrl}
-          download
-          className="text-primary underline underline-offset-4 hover:opacity-80"
-        >
-          {portfolio.cvUrl}
-        </a>
-      </p>
-    )
-  }
-
   if (cmd === 'uptime') {
     return <p className="text-muted-foreground">Nodo operativo · 18 servicios self-hosted · backups verificados ✓</p>
   }
@@ -193,8 +175,33 @@ function runCommand(raw: string): ReactNode | null {
     return <p className="text-muted-foreground">~/jhonier/portfolio</p>
   }
 
+  if (cmd === 'nano') {
+    return <p>Abriste nano. Pulsa Ctrl+X para salir (si puedes). Nadie sale de nano.</p>
+  }
+
+  if (cmd.includes('--no-preserve-root')) {
+    return (
+      <div>
+        <ThisIsFineDog />
+        <p className="mt-3 text-destructive">Sistema en llamas: todo bajo control.</p>
+      </div>
+    )
+  }
+
+  if (cmd.includes('rm -rf /')) {
+    return <p>El mejor comando que existe.</p>
+  }
+
+  if (cmd.includes('apt update')) {
+    return <p>&& upgrade también no?</p>
+  }
+
+  if (cmd.includes('apt upgrade')) {
+    return <p>Con calma: primero "sudo apt update".</p>
+  }
+
   if (cmd === 'sudo' || cmd.startsWith('sudo ')) {
-    return <p className="text-destructive">Permission denied: el visitante no está en /etc/sudoers 😄</p>
+    return <p className="text-destructive">Permission denied: el visitante no está en /etc/sudoers</p>
   }
 
   if (cmd === 'ls') {
