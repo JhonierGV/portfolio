@@ -127,7 +127,7 @@ export const portfolio = {
     },
     {
       degree: 'Educación Secundaria Obligatoria',
-      school: 'IES Toledo',
+      school: 'IES Universidad Laboral de Toledo',
       period: 'Completada',
     },
   ],
