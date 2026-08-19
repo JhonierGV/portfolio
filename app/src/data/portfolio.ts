@@ -51,8 +51,8 @@ export const portfolio = {
   description:
     'Técnico informático especializado en administración de sistemas, virtualización y soporte técnico. Diseño, despliego y mantengo infraestructura autohospedada: Proxmox, Docker, redes y seguridad.',
   summary: [
-    'Apasionado por la infraestructura y el autohospedaje. Gestiono un homelab donde conviven virtualización Proxmox, servicios en contenedores, firewall pfSense y monitoreo de seguridad — todo aprendido y mantenido por mí, con foco en disponibilidad y buenas prácticas.',
-    'Busco un puesto como administrador o técnico de sistemas donde pueda aportar orden, automatización y seguridad a entornos reales.',
+    'Empecé el homelab por curiosidad y se me fue de las manos: hoy es un Proxmox con 18 servicios que uso a diario — virtualización, firewall, VPN, monitorización de seguridad — y casi todo lo he aprendido montándolo, rompiéndolo y arreglándolo yo mismo. Cada cosa que hago la dejo documentada, porque he aprendido que lo que no está escrito no existe.',
+    'Busco mi primera oportunidad como administrador o técnico de sistemas: quiero poner todo esto a trabajar en un entorno real, no solo en casa.',
   ],
   location: 'Toledo, España',
   email: 'jhoniergarzon68@gmail.com',
@@ -222,7 +222,7 @@ export const portfolio = {
       tags: ['Wazuh', 'Seguridad'],
       screenshot: 'assets/wazuh.png',
       problem:
-        'Sin visibilidad centralizada de los eventos de seguridad: logs dispersos, sin detección de intrusiones ni control de integridad de archivos.',
+        'Tenía logs por todas partes y cero visibilidad: si alguien entraba en la red, no me iba a enterar.',
       solution:
         'Despliegue de Wazuh (SIEM/IDS) que centraliza logs, detecta intrusiones, monitoriza la integridad de archivos y alerta de anomalías en todos los servicios de la infraestructura.',
       architecture: [
@@ -235,7 +235,7 @@ export const portfolio = {
       lessons: [
         'Un SIEM en un homelab enseña más que cualquier curso: aprendes qué alertas importan de verdad.',
         'Wazuh necesita recursos: planifica RAM para indexado y correlación.',
-        'Las reglas por defecto generan ruido; las reglas propias son las que aportan valor.',
+        'El primer mes de Wazuh es puro ruido: hasta que no montas tus propias reglas no sabes qué merece la pena mirar.',
       ],
     },
     {
@@ -365,7 +365,7 @@ export const portfolio = {
       tags: ['Vaultwarden', 'Bitwarden', 'Docker'],
       screenshot: 'assets/vaultwarden.png',
       problem:
-        'Contraseñas dispersas y dependencia de gestores en la nube de terceros.',
+        'Las contraseñas estaban repartidas por todas partes y no quería depender de un gestor en la nube de un tercero.',
       solution:
         'Vaultwarden self-hosted, compatible con clientes Bitwarden: contraseñas y secretos centralizados, accesibles desde cualquier dispositivo y bajo control propio.',
       architecture: [
@@ -388,7 +388,7 @@ export const portfolio = {
       tags: ['NPM', 'Proxy', 'SSL'],
       screenshot: 'assets/nginx.png',
       problem:
-        'Múltiples servicios HTTP sin un punto de entrada único ni HTTPS automatizado.',
+        'Cada servicio iba por su puerto, sin HTTPS y sin un punto de entrada claro.',
       solution:
         'Nginx Proxy Manager como proxy inverso central: cada servicio con su subdominio y certificado SSL automático.',
       architecture: [

@@ -32,7 +32,7 @@ export function Services() {
         <SectionHeading
           eyebrow="// servicios"
           title="¿En qué puedo ayudarte?"
-          description="Áreas en las que puedo aportar orden, automatización y seguridad."
+          description="Lo que hago cada día en el homelab, aplicado a un entorno de verdad."
         />
 
         <div className="grid gap-4 sm:grid-cols-2">

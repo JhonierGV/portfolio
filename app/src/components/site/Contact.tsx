@@ -49,7 +49,7 @@ export function Contact() {
         <SectionHeading
           eyebrow="// contacto"
           title="¿Hablamos?"
-          description="Si buscas un administrador o técnico en sistemas que pueda aportar a algún proyecto, puedes contactarme por cualquiera de estos canales."
+          description="¿Buscas a alguien que administre sistemas y tenga la prueba montada en casa? Escríbeme por el canal que prefieras."
         />
 
         <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
