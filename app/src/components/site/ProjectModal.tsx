@@ -83,14 +83,6 @@ export function ProjectModal({ project, onClose }: ProjectModalProps) {
             </div>
           ) : null}
 
-          <div className="mt-3 flex flex-wrap gap-2">
-            {project.tags.map((tag) => (
-              <Badge key={tag} variant="secondary" className="font-mono text-[11px]">
-                {tag}
-              </Badge>
-            ))}
-          </div>
-
           {project.screenshot ? (
             <div className="relative z-10 mt-4 rounded-xl border border-border">
               <img

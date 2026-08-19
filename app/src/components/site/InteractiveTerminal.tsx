@@ -175,8 +175,8 @@ function runCommand(raw: string): ReactNode | null {
     return <p className="text-muted-foreground">~/jhonier/portfolio</p>
   }
 
-  if (cmd === 'nano') {
-    return <p>Abriste nano. Pulsa Ctrl+X para salir (si puedes). Nadie sale de nano.</p>
+  if (cmd === 'vim' || cmd === 'vi') {
+    return <p>Abriste vim. Escribe <span className="text-primary">:q!</span> para salir (si puedes). Nadie sale de vim.</p>
   }
 
   if (cmd.includes('--no-preserve-root')) {
