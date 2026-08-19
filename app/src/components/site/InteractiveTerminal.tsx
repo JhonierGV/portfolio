@@ -63,13 +63,10 @@ function runCommand(raw: string): ReactNode | null {
 
   if (cmd === 'whoami') {
     return (
-      <div className="space-y-1">
-        <p>
-          <span className="text-primary">{portfolio.name}</span> — {portfolio.role}
-        </p>
-        <p className="text-muted-foreground">{portfolio.description}</p>
-        <p className="text-muted-foreground">{portfolio.location}</p>
-      </div>
+      <p>
+        <span className="text-primary">{portfolio.name}</span> — el resto ya lo viste en el hero. Prueba{' '}
+        <span className="text-primary">skills</span> o <span className="text-primary">exp</span> para algo nuevo.
+      </p>
     )
   }
 
