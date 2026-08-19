@@ -338,6 +338,7 @@ export const portfolio = {
       description:
         'Base de conocimiento canónica del homelab: wiki estructurada en Obsidian con ingesta automática y mantenida por el agente de IA.',
       tags: ['Obsidian', 'Knowledge Base', 'Ingesta'],
+      screenshot: 'assets/obsidian.png',
       problem:
         'La documentación del homelab estaba dispersa en notas sueltas y en la cabeza; el agente de IA no tenía una fuente fiable de memoria.',
       solution:
