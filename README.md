@@ -1,8 +1,8 @@
 # Jhonier Garzón — Portfolio
 
-> Técnico Superior en Administración de Sistemas y Redes · Toledo, España
+> Técnico Superior en Administración de Sistemas y Redes
 
-Mi portfolio profesional: la web donde muestro quién soy, mi experiencia, los proyectos de infraestructura que mantengo en mi homelab y cómo contactar conmigo.
+Mi portfolio profesionaL aquí es donde muestro un poco todo de lo que he aprendido
 
 ## 🌐 Ver en vivo
 
@@ -16,17 +16,17 @@ Técnico informático especializado en administración de sistemas, virtualizaci
 
 Apasionado por la infraestructura y el autohospedaje. Gestiono un homelab donde conviven virtualización Proxmox, servicios en contenedores, firewall pfSense y monitoreo de seguridad — todo aprendido y mantenido por mí, con foco en disponibilidad y buenas prácticas.
 
-Busco un puesto como administrador o técnico de sistemas donde pueda aportar orden, automatización y seguridad a entornos reales.
+Como buen junior estoy en busqueda activa de un puesto donde pueda encajar.
 
 ## Qué encontrarás en la web
 
 - **Hero con terminal interactiva**: 10 comandos para explorar el portfolio como si fuera un servidor
 - **Servicios**: lo que hago y cómo puedo ayudar
-- **Experiencia**: CYSIA (2025–2026), IES Universidad Laboral de Toledo (2024) y mi homelab autogestionado (2024 — actualidad)
+- **Experiencia**: La experiencia en diferentes sitis y mi homelab autogestionado
 - **Proyectos**: 9 proyectos con ficha detallada (problema, solución, arquitectura y lecciones aprendidas)
-- **Arquitectura**: el homelab a vista de pájaro
+- **Arquitectura**: un diagrama de la arquitectura del homelab
 - **Contacto**: email, LinkedIn y GitHub
-- **Easter eggs**: un perrito ASCII incluido 🐶
+- **Easter eggs**: algún que otro secreto en la terminal
 
 ## Proyectos destacados
 
@@ -42,13 +42,6 @@ Busco un puesto como administrador o técnico de sistemas donde pueda aportar or
 | **Gestor de contraseñas privado** — compatible con Bitwarden | Vaultwarden, Docker |
 | **Nginx Proxy Manager** — proxy inverso con SSL automático | NPM, Let's Encrypt |
 
-## Tecnologías de la web
-
-React 19 · Vite 8 · TypeScript · Tailwind CSS 4 · shadcn/ui · Motion
-
-## Stack que administro a diario
-
-Virtualización (Proxmox VE, LXC, QEMU/KVM, VMware) · Redes (pfSense, MikroTik, WireGuard, Tailscale, HAProxy) · Proxy y SSL (Nginx Proxy Manager, Let's Encrypt) · Seguridad (Wazuh, Zabbix) · Sistemas (Linux, Windows Server, Bash, Python) · Cloud (Hetzner, Oracle Cloud, Azure) · BBDD (PostgreSQL, MySQL, SQL Server)
 
 ## Contacto
 
