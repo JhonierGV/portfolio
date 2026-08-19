@@ -1,14 +1,17 @@
 import { useState } from 'react'
-import { ArrowUpRight, Image as ImageIcon } from 'lucide-react'
 import { SectionHeading } from './SectionHeading'
-import { Reveal } from './Reveal'
+import { CategoryModal } from './CategoryModal'
 import { ProjectModal } from './ProjectModal'
-import { SpotlightCard } from './SpotlightCard'
-import { TiltCard } from './TiltCard'
-import { portfolio, type Project } from '@/data/portfolio'
+import { CategoryGallery } from '@/components/ui/category-gallery'
+import { categories, portfolio, type Category, type Project } from '@/data/portfolio'
 
 export function Projects() {
+  const [openCategory, setOpenCategory] = useState<Category | null>(null)
   const [selected, setSelected] = useState<Project | null>(null)
+
+  const categoryProjects = openCategory
+    ? (portfolio.projects as readonly Project[]).filter((p) => p.category === openCategory.id)
+    : []
 
   return (
     <section id="proyectos" className="scroll-mt-20 py-24">
@@ -16,53 +19,23 @@ export function Projects() {
         <SectionHeading
           eyebrow="// proyectos"
           title="Proyectos"
-          description="Selección de servicios y proyectos desplegados en mi homelab Proxmox. Haz clic en una tarjeta para ver el detalle."
+          description="Servicios y proyectos desplegados en mi homelab Proxmox, organizados por área. Elige una categoría para ver sus proyectos."
         />
 
-        <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-          {(portfolio.projects as readonly Project[]).map((project, i) => (
-            <Reveal key={project.title} delay={i * 60} className="h-full">
-              <TiltCard>
-                <SpotlightCard className="group h-full rounded-xl border border-border bg-card transition-all hover:border-primary/40 hover:shadow-lg hover:shadow-primary/5">
-                  <button
-                    type="button"
-                    onClick={() => setSelected(project)}
-                    className="flex h-full w-full flex-col text-left outline-none"
-                  >
-                    {project.screenshot ? (
-                      <div className="aspect-video w-full overflow-hidden border-b border-border">
-                        <img
-                          src={project.screenshot}
-                          alt={`Captura de ${project.title}`}
-                          loading="lazy"
-                          className="h-full w-full object-cover transition-transform duration-700 ease-out group-hover:scale-125"
-                        />
-                      </div>
-                    ) : (
-                      <div className="flex aspect-video w-full items-center justify-center border-b border-border bg-muted/40">
-                        <ImageIcon className="size-6 text-muted-foreground/40" aria-hidden />
-                      </div>
-                    )}
-
-                    <div className="flex flex-1 flex-col p-6">
-                      <div className="flex items-start justify-between gap-2">
-                        <h3 className="text-base font-semibold text-foreground">{project.title}</h3>
-                        <ArrowUpRight className="mt-0.5 size-4 shrink-0 text-muted-foreground transition-all group-hover:-translate-y-0.5 group-hover:translate-x-0.5 group-hover:text-primary" />
-                      </div>
-                      <p className="mt-2 flex-1 text-sm leading-relaxed text-muted-foreground">
-                        {project.description}
-                      </p>
-                      <span className="mt-4 font-mono text-[11px] uppercase tracking-wider text-muted-foreground transition-colors group-hover:text-primary">
-                        Ver detalles →
-                      </span>
-                    </div>
-                  </button>
-                </SpotlightCard>
-              </TiltCard>
-            </Reveal>
-          ))}
-        </div>
+        <CategoryGallery
+          items={categories}
+          onOpenCategory={(id) => setOpenCategory(categories.find((c) => c.id === id) ?? null)}
+        />
       </div>
+
+      {openCategory && !selected ? (
+        <CategoryModal
+          category={openCategory}
+          projects={categoryProjects}
+          onSelectProject={setSelected}
+          onClose={() => setOpenCategory(null)}
+        />
+      ) : null}
 
       <ProjectModal project={selected} onClose={() => setSelected(null)} />
     </section>

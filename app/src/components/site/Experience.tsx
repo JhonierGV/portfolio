@@ -33,7 +33,7 @@ export function Experience() {
           />
 
           {portfolio.experience.map((item, i) => (
-            <Reveal as="li" key={item.company} delay={i * 80} className="relative">
+            <Reveal as="li" key={`${item.company}-${item.role}-${item.period}`} delay={i * 80} className="relative">
               <span
                 className="absolute -left-[37px] flex size-4 items-center justify-center rounded-full border border-border bg-card"
                 aria-hidden

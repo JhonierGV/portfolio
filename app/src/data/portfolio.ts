@@ -1,5 +1,6 @@
 export interface Project {
   title: string
+  category: string
   description: string
   tags: readonly string[]
   problem: string
@@ -11,6 +12,30 @@ export interface Project {
   facts?: readonly string[]
   screenshot?: string
 }
+
+export interface Category {
+  id: string
+  title: string
+  subtitle: string
+}
+
+export const categories: readonly Category[] = [
+  {
+    id: 'sistemas',
+    title: 'Sistemas e Infraestructura',
+    subtitle: 'Virtualización, backups y servicios base',
+  },
+  {
+    id: 'redes-seguridad',
+    title: 'Redes y Seguridad',
+    subtitle: 'VPN, SIEM y filtrado de red',
+  },
+  {
+    id: 'auto-ia',
+    title: 'Automatización e IA',
+    subtitle: 'Workflows, agentes y modelos locales',
+  },
+]
 
 export interface Certification {
   title: string
@@ -139,6 +164,7 @@ export const portfolio = {
   projects: [
     {
       title: 'Homelab Proxmox',
+      category: 'sistemas',
       description:
         'Plataforma de virtualización con 18 servicios autohospedados en un único nodo, backups y alta disponibilidad.',
       tags: ['Proxmox', 'Docker', 'LXC'],
@@ -165,6 +191,7 @@ export const portfolio = {
     },
     {
       title: 'VPN Privada',
+      category: 'redes-seguridad',
       description:
         'VPN totalmente privada: túnel WireGuard que sortea el CGNAT del ISP mediante un relay en Oracle Cloud, sin depender de servicios VPN de terceros.',
       tags: ['WireGuard', 'Redes', 'Oracle Cloud'],
@@ -189,6 +216,7 @@ export const portfolio = {
     },
     {
       title: 'Wazuh SIEM',
+      category: 'redes-seguridad',
       description:
         'Monitoreo de seguridad centralizado sobre los agentes y servicios del homelab.',
       tags: ['Wazuh', 'Seguridad'],
@@ -212,6 +240,7 @@ export const portfolio = {
     },
     {
       title: 'Adblocker para red local',
+      category: 'redes-seguridad',
       description:
         'DNS de red con filtrado de anuncios y trackers en toda la LAN.',
       tags: ['AdGuard', 'DNS'],
@@ -234,6 +263,7 @@ export const portfolio = {
     },
     {
       title: 'Hermes Agent',
+      category: 'auto-ia',
       description:
         'Agente de IA autónomo (Nous Research) en su propio LXC, con inferencia local vía Ollama y gateway de Telegram.',
       tags: ['IA', 'LXC', 'Ollama'],
@@ -257,6 +287,7 @@ export const portfolio = {
     },
     {
       title: 'Proxmox Backup Server',
+      category: 'sistemas',
       description:
         'Backups nativos y deduplicados de toda la infraestructura con restauración granular.',
       tags: ['PBS', 'Backups'],
@@ -280,6 +311,7 @@ export const portfolio = {
     },
     {
       title: 'n8n · Automatización',
+      category: 'auto-ia',
       description:
         'Motor de automatización con workflows que conectan servicios del homelab, tareas programadas y avisos por Telegram.',
       tags: ['n8n', 'Automatización'],
@@ -302,6 +334,7 @@ export const portfolio = {
     },
     {
       title: 'Gestor de contraseñas privado',
+      category: 'sistemas',
       description:
         'Gestor de contraseñas self-hosted, compatible con Bitwarden, para centralizar los secretos del homelab.',
       tags: ['Vaultwarden', 'Bitwarden', 'Docker'],
@@ -324,6 +357,7 @@ export const portfolio = {
     },
     {
       title: 'Nginx Proxy Manager',
+      category: 'sistemas',
       description:
         'Proxy inverso con SSL automático (Let\'s Encrypt) para exponer los servicios del homelab por subdominio.',
       tags: ['NPM', 'Proxy', 'SSL'],
