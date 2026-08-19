@@ -19,7 +19,7 @@ export function Projects() {
         <SectionHeading
           eyebrow="// proyectos"
           title="Proyectos"
-          description="Servicios y proyectos desplegados en mi homelab Proxmox, organizados por área. Elige una categoría para ver sus proyectos."
+          description="Servicios y proyectos desplegados en mi homelab, organizados por área. Elige una categoría para ver."
         />
 
         <CategoryGallery

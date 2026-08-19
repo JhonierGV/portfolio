@@ -16,7 +16,7 @@ export function ArchitectureDiagram() {
         <SectionHeading
           eyebrow="// arquitectura"
           title="Arquitectura del homelab"
-          description="Un único nodo Proxmox con 18 servicios, acceso remoto vía WireGuard saltando el CGNAT del ISP y backups deduplicados."
+          description="Un único nodo Proxmox con 18 servicios, acceso remoto vía WireGuard saltando el CGNAT del ISP."
         />
 
         <Reveal>
