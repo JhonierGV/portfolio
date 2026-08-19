@@ -1,6 +1,5 @@
 import { useEffect, type ReactNode } from 'react'
 import { ArrowUpRight, Lightbulb, Network, Sparkles, Wrench, X } from 'lucide-react'
-import { Badge } from '@/components/ui/badge'
 import type { Project } from '@/data/portfolio'
 
 interface ProjectModalProps {
@@ -124,16 +123,6 @@ export function ProjectModal({ project, onClose }: ProjectModalProps) {
                 </li>
               ))}
             </ul>
-          </Detail>
-
-          <Detail icon={<Wrench className="size-3.5" />} title="Stack">
-            <div className="flex flex-wrap gap-2">
-              {project.stack.map((tech) => (
-                <Badge key={tech} variant="outline" className="font-mono text-[11px]">
-                  {tech}
-                </Badge>
-              ))}
-            </div>
           </Detail>
 
           {project.repo ? (
