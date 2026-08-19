@@ -333,6 +333,30 @@ export const portfolio = {
       ],
     },
     {
+      title: 'Vault · Base de Conocimiento',
+      category: 'auto-ia',
+      description:
+        'Base de conocimiento canónica del homelab: wiki estructurada en Obsidian con ingesta automática y mantenida por el agente de IA.',
+      tags: ['Obsidian', 'Knowledge Base', 'Ingesta'],
+      problem:
+        'La documentación del homelab estaba dispersa en notas sueltas y en la cabeza; el agente de IA no tenía una fuente fiable de memoria.',
+      solution:
+        'Vault Obsidian como knowledge graph canónico: entidades, conceptos y diagramas interconectados, con ingesta automática vía servicio propio y mantenimiento por el agente Hermes mediante operaciones Ingest, Query y Lint.',
+      architecture: [
+        'Vault en /root/vault con estructura definida en SCHEMA.md: wiki/entities, concepts, sources, analyses y diagrams.',
+        'Servicio systemd vault-ingest que recibe contenido y lo deja como borradores en hermes/ingesta/.',
+        'Hermes como mantenedor: ingesta, consultas y lint por lenguaje natural.',
+        'Sincronización Syncthing al cliente Obsidian de Windows.',
+      ],
+      stack: ['Obsidian', 'Markdown', 'Knowledge Graph', 'Syncthing', 'systemd'],
+      lessons: [
+        'Documentar mientras construyes convierte el homelab en un activo mantenible.',
+        'Una wiki con operaciones definidas (ingesta, consulta, lint) se mantiene viva; un README suelto se pudre.',
+        'Los enlaces [[wiki]] hacen el conocimiento navegable, no un cajón de notas.',
+      ],
+      facts: ['31 entidades', '20 conceptos', '3 diagramas', 'ingesta automática'],
+    },
+    {
       title: 'Gestor de contraseñas privado',
       category: 'sistemas',
       description:
