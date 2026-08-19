@@ -22,7 +22,7 @@ Como buen junior estoy en busqueda activa de un puesto donde pueda encajar.
 
 - **Hero con terminal interactiva**: 10 comandos para explorar el portfolio como si fuera un servidor
 - **Servicios**: lo que hago y cómo puedo ayudar
-- **Experiencia**: La experiencia en diferentes sitis y mi homelab autogestionado
+- **Experiencia**: La experiencia en diferentes sitios y lo que aprendí en el homelab
 - **Proyectos**: 9 proyectos con ficha detallada (problema, solución, arquitectura y lecciones aprendidas)
 - **Arquitectura**: un diagrama de la arquitectura del homelab
 - **Contacto**: email, LinkedIn y GitHub
