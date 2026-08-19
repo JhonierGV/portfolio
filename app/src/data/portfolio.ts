@@ -35,10 +35,7 @@ export const portfolio = {
   linkedin: 'https://www.linkedin.com/in/JhonierGarzonIT',
   github: 'https://github.com/JhonierGV',
   cvUrl: 'assets/CV_JhonierGarzon.pdf',
-  status: [
-    { label: 'Nodo Proxmox operativo', dot: true },
-    { label: 'Disponible para oportunidades', dot: true },
-  ],
+  status: [{ label: 'Disponible para oportunidades' }],
   stats: [
     { value: '12', label: 'Contenedores LXC' },
     { value: '2', label: 'Máquinas virtuales' },

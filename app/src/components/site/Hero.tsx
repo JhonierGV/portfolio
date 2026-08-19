@@ -48,20 +48,6 @@ export function Hero() {
           {portfolio.description}
         </motion.p>
 
-        <motion.div variants={item} className="mt-8 flex flex-wrap items-center justify-center gap-2">
-          {portfolio.status.map((status) => (
-            <span
-              key={status.label}
-              className="inline-flex items-center gap-2 rounded-full border border-border bg-card px-3 py-1 text-xs text-muted-foreground"
-            >
-              {status.dot ? (
-                <span className="status-dot size-2 rounded-full bg-emerald-400" aria-hidden />
-              ) : null}
-              {status.label}
-            </span>
-          ))}
-        </motion.div>
-
         <motion.div variants={item} className="mt-10 flex flex-wrap items-center justify-center gap-3">
           <MagneticButton>
             <Button asChild size="lg" variant="outline">
